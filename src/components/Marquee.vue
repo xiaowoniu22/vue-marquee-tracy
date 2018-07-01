@@ -26,7 +26,7 @@ export default {
     },
     avatar: {
       type: String,
-      default: '../../static/head.png'
+      default: require('../../static/head.png')
     },
     width: {
       type: Number,
@@ -56,7 +56,7 @@ export default {
     this.marqueeWidth = totalWidth
     const rule = `@keyframes mymove{
                 0%   {left:${this.width}px;}
-                100% {left:-${this.marqueeWidth - this.width}px;}
+                100% {left:-${this.marqueeWidth}px;}
               }`
     if (document.styleSheets && document.styleSheets.length) {
       document.styleSheets[0].insertRule(rule, 0)
@@ -83,10 +83,9 @@ export default {
   .marquee_ul li{
     height: 50px;
     text-align: center;
-    display: flex;
     float: left;
   }
   .marquee_ul li span{
-    display: block;
+    display: inline-block;
   }
 </style>
