@@ -3,7 +3,7 @@
     <ul class="marquee_ul" :style="{width: marqueeWidth+'px'}">
       <li :key="index" v-for="(tip,index) in tipList" class="marquee-li">
         <img v-if="showAvatar" :src="avatar" width="43" height="40"/>
-        <span :style="{ paddingRight: distance}">{{tip}}</span>
+        <span :style="{ paddingRight: distance + 'px'}">{{tip}}</span>
       </li>
     </ul>
   </div>
@@ -33,8 +33,8 @@ export default {
       default: 700
     },
     distance: {
-      type: String,
-      default: '100px'
+      type: Number,
+      default: 100
     },
     showAvatar: {
       type: Boolean,
@@ -84,8 +84,11 @@ export default {
     height: 50px;
     text-align: center;
     float: left;
+    list-style: none;
+    display: flex;
   }
   .marquee_ul li span{
     display: inline-block;
+    white-space: nowrap;
   }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div style="display: flex; justify-content: center">
-      <Marquee :tipList="tipList" :showAvatar="false" :width="500" ></Marquee>
+    <div style="display: flex; align-items: center; flex-direction: column">
+      <span>获奖名单</span>
+      <Marquee :tipList="tipList" :width="500" ></Marquee>
     </div>
   </div>
 </template>
@@ -17,9 +17,9 @@ export default {
   data: function () {
     return {
       tipList: [
-        '张三获得了一台笔记本电脑',
-        '二狗子获得了一台笔记本电脑',
-        'Tracy获得了一箱冰淇淋'
+        'A获得了一台笔记本电脑',
+        'B获得了一台液晶电视',
+        'c获得了一台ipad'
       ]
     }
   }

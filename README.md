@@ -1,6 +1,8 @@
-# test
+# vue横向走马灯（有时间扩展成纵向支持）
 
-> A Vue.js project
+> A Vue.js component
+
+vue横向走马灯可实现获奖名单展示的类似功能
 
 ## Build Setup
 
@@ -18,5 +20,15 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 # vue-marquee-tracy
+```
+npm install vue-marquee-tracy --save
+```
+# Options
+| 参数 | 类型 | 默认 | 备注 |
+|-------|-------|-------|-----|
+|tipList|Array|[]|获奖名单列表|
+|avatar|String|组件默认的头像|获奖者头像|
+|width|Number|700|获奖名单展示区宽度|
+|distance|Number|100|获奖列表item的间距|
+|showAvatar|Boolean|true|是否展示头像|
